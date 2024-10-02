@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de Requisitos - Escrevendo as classes de um Jogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Documento de Requisitos</h1>
+<h2>Sistema: Escrevendo as classes de um Jogo</h2>
+<h3>Histórico de Revisões</h3>
+<ul>
+    <li><strong>Data:</strong> 01/10/2024</li>
+    <li><strong>Descrição:</strong> Especificação inicial dos requisitos do escrevendo as classes de um jogo com criação e ações de ataque.</li>
+    <li><strong>Responsável:</strong> Rafael Borring</li>
+</ul>
+
+<h2>1. Objetivos</h2>
+<p>
+    O Escrevendo as classes de um Jogo é uma aplicação que permite representar heróis em uma aventura, possibilitando a criação de heróis e a execução de ações de ataque baseadas em suas características.
+</p>
+
+<h2>1.1. Objetivos do Documento</h2>
+<p>
+    Este documento tem como objetivo descrever e especificar os requisitos do sistema, servindo como guia para os desenvolvedores e interessados.
+</p>
+
+<h2>2. Escopo Geral do Produto</h2>
+<p>
+    O sistema permite a criação de heróis com diferentes tipos e idades, e a realização de ataques específicos de acordo com o tipo de herói.
+</p>
+
+<h2>3. Convenções, Termos e Abreviações</h2>
+<ul>
+    <li>Tipo – Categoria do herói (ex: guerreiro, mago, monge, ninja).</li>
+    <li>Nome – Nome do herói.</li>
+    <li>Idade – Idade do herói.</li>
+</ul>
+
+<h2>4. Requisitos</h2>
+
+<h2>4.1. Requisitos Funcionais</h2>
+<table>
+    <tr>
+        <td>RF001</td>
+        <td>Permitir a criação de um herói com nome, idade e tipo.</td>
+    </tr>
+    <tr>
+        <td>Entrada</td>
+        <td>Nome (string), Idade (número), Tipo (string)</td>
+    </tr>
+    <tr>
+        <td>Saída</td>
+        <td>Confirmação da criação do herói adicionando à lista de heróis.</td>
+    </tr>
+    <tr>
+        <td>Pré-condição</td>
+        <td>Os campos de nome, idade e tipo devem estar preenchidos.</td>
+    </tr>
+    <tr>
+        <td>Pós-condição</td>
+        <td>Um novo herói é criado e exibido na lista de heróis.</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>RF002</td>
+        <td>Implementar um método para atacar que exiba a mensagem adequada.</td>
+    </tr>
+    <tr>
+        <td>Entrada</td>
+        <td>Tipo (string)</td>
+    </tr>
+    <tr>
+        <td>Saída</td>
+        <td>Mensagem de ataque do herói (string).</td>
+    </tr>
+    <tr>
+        <td>Pré-condição</td>
+        <td>O tipo do herói deve ser um dos tipos válidos (mago, guerreiro, monge, ninja).</td>
+    </tr>
+    <tr>
+        <td>Pós-condição</td>
+        <td>A mensagem de ataque é gerada e exibida ao usuário.</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>RF003</td>
+        <td>Exibir uma lista de heróis criados com um botão de ataque ao lado de cada um.</td>
+    </tr>
+    <tr>
+        <td>Entrada</td>
+        <td>Heróis criados (array de objetos).</td>
+    </tr>
+    <tr>
+        <td>Saída</td>
+        <td>Lista de heróis exibida na interface do usuário, com botões de ataque.</td>
+    </tr>
+    <tr>
+        <td>Pré-condição</td>
+        <td>Deve haver pelo menos um herói criado.</td>
+    </tr>
+    <tr>
+        <td>Pós-condição</td>
+        <td>A lista de heróis é atualizada e cada herói tem um botão de ataque associado.</td>
+    </tr>
+</table>
+
+</h2>4.2 Requisitos Não Funcionais</h2>
+<table>
+    <tr>
+        <td>RNF001</td>
+        <td>O sistema deve ser responsivo e funcionar em dispositivos móveis.</td>
+    </tr>
+</table>
+
+<h2>4.3 Requisitos de Domínio</h2>
+<table>
+    <tr>
+        <td>RD001</td>
+        <td>
+            <p>O sistema deve reconhecer os seguintes tipos de heróis e seus ataques:</p>
+            <p>- Mago: "usou magia"</p>
+            <p>- Guerreiro: "usou espada"</p>
+            <p>- Monge: "usou artes marciais"</p>
+            <p>- Ninja: "usou shuriken"</p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
